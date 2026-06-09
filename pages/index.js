@@ -14,7 +14,7 @@ export default function Home() {
         <div className="card">
           <h1>Welcome to myBillAnalysis</h1>
           <p>This is the main Next.js app. Use the button below to open the static single page Tic Tac Toe app.</p>
-          <Link href="/index.html" className="button">
+          <Link href="/tictactoe.html" className="button">
             Open static Tic Tac Toe page
           </Link>
         </div>
