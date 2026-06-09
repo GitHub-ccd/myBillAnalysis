@@ -106,13 +106,21 @@
 <body>
     <div class="container">
         <h1>Tic Tac Toe</h1>
-        <p class="link-wrapper"><a href="./index.html">Return to main app</a></p>
+        <p class="link-wrapper"><a id="return-link" href="./index.html">Return to main app</a></p>
         <div id="status" class="status-display">Player X's Turn</div>
         <div id="board" class="board"></div>
         <button onclick="resetGame()">New Game</button>
     </div>
 
     <script>
+        const returnLink = document.getElementById('return-link');
+        if (returnLink) {
+            const path = window.location.pathname;
+            const newHref = path.endsWith('/tictactoe.html')
+                ? path.replace(/\/[^/]+$/, '/index.html')
+                : './index.html';
+            returnLink.setAttribute('href', newHref);
+        }
         let currentPlayer = 'X';
         let gameBoard = ['', '', '', '', '', '', '', '', ''];
         let gameOver = false;

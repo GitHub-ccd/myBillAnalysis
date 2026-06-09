@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -14,12 +13,12 @@ export default function Home() {
         <header className="site-header">
           <div className="brand">myBillAnalysis</div>
           <nav className="nav-menu">
-            <Link href="/" className="nav-link active">
+            <a href="./" className="nav-link active">
               Home
-            </Link>
-            <Link href="tictactoe.html" className="nav-link">
+            </a>
+            <a href="./tictactoe.html" className="nav-link">
               Tic Tac Toe
-            </Link>
+            </a>
           </nav>
         </header>
 
@@ -32,9 +31,9 @@ export default function Home() {
               then return here anytime with the built-in home link.
             </p>
             <div className="hero-actions">
-              <Link href="/tictactoe.html" className="primary-button">
+              <a href="./tictactoe.html" className="primary-button">
                 Play Tic Tac Toe
-              </Link>
+              </a>
             </div>
           </div>
 
